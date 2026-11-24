@@ -9,6 +9,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+require get_template_directory() . '/inc/catalog.php';
+
 /**
  * Register theme supports, including WooCommerce.
  */
