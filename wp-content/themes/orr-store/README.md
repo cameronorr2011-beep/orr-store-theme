@@ -3,6 +3,11 @@
 A one-page WooCommerce theme for **shop.orrbiologicals.com**: a sticky header with
 the cart count, one hero, and a grid of every published product. Nothing else.
 
+There are no product pages and no cart page. Add to cart comes straight back to
+the page with the cart panel open (`/#cart`), and product, shop and cart URLs all
+301 back to the page. Checkout is the one exception — WooCommerce needs a page of
+its own to take payment.
+
 ## What the shop sells
 
 The theme creates the catalog itself the first time it is activated on a store

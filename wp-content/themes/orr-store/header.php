@@ -22,7 +22,7 @@
 
 		<?php if ( function_exists( 'wc_get_cart_url' ) ) : ?>
 			<?php $orr_store_count = orr_store_cart_count(); ?>
-			<a class="cart-link" href="<?php echo esc_url( wc_get_cart_url() ); ?>">
+			<a class="cart-link" href="#cart">
 				<?php esc_html_e( 'Cart', 'orr-store' ); ?>
 				<span aria-hidden="true">(<?php echo esc_html( number_format_i18n( $orr_store_count ) ); ?>)</span>
 				<span class="screen-reader-text">

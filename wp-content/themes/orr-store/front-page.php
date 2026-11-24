@@ -1,6 +1,6 @@
 <?php
 /**
- * The one page: hero, then every published WooCommerce product.
+ * The one page: hero, every published product, and the cart.
  *
  * @package OrrStore
  */
@@ -48,19 +48,15 @@ $orr_store_intro = apply_filters(
 					<?php foreach ( $orr_store_products as $orr_store_product ) : ?>
 
 						<li class="card">
-							<a class="card__media" href="<?php echo esc_url( $orr_store_product->get_permalink() ); ?>">
+							<div class="card__media">
 								<?php echo $orr_store_product->get_image( 'woocommerce_thumbnail' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- WooCommerce returns escaped markup. ?>
-							</a>
+							</div>
 
-							<h2>
-								<a href="<?php echo esc_url( $orr_store_product->get_permalink() ); ?>">
-									<?php echo esc_html( $orr_store_product->get_name() ); ?>
-								</a>
-							</h2>
+							<h2><?php echo esc_html( $orr_store_product->get_name() ); ?></h2>
 
 							<p class="price"><?php echo wp_kses_post( $orr_store_product->get_price_html() ); ?></p>
 
-							<a class="btn" href="<?php echo esc_url( $orr_store_product->add_to_cart_url() ); ?>">
+							<a class="btn" href="<?php echo esc_url( $orr_store_product->add_to_cart_url() . '#cart' ); ?>">
 								<?php echo esc_html( $orr_store_product->add_to_cart_text() ); ?>
 							</a>
 						</li>
@@ -71,6 +67,8 @@ $orr_store_intro = apply_filters(
 			<?php endif; ?>
 		</div>
 	</section>
+
+	<?php orr_store_cart_drawer(); ?>
 
 </main>
 <?php
