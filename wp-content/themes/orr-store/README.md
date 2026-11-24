@@ -1,6 +1,6 @@
 # Orr Store
 
-A one-page WooCommerce theme for **shop.orrbiologicals.com**: a sticky header with
+A one-page WooCommerce theme for **store.orrbiologicals.com**: a sticky header with
 the cart count, one hero, and a grid of every published product. Nothing else.
 
 There are no product pages and no cart page. Add to cart comes straight back to
@@ -37,12 +37,12 @@ An existing catalog is never modified or duplicated, so it is safe to activate
 the theme on a live shop. To run it again after deleting the products, remove the
 `orr_store_catalog_version` option.
 
-## Install on shop.orrbiologicals.com
+## Install on store.orrbiologicals.com
 
 1. The docroot must be empty of the old static site — delete `index.html` and its
    `assets/` folder first. WordPress and a static `index.html` cannot share a
    document root.
-2. In hPanel, install WordPress on **shop.orrbiologicals.com**.
+2. In hPanel, install WordPress on **store.orrbiologicals.com**.
 3. In WordPress, install and activate **WooCommerce**. Let it create its pages
    (Shop, Cart, Checkout, My account).
 4. hPanel → Advanced → **GIT** → connect `cameronorr2011-beep/orr-store-theme`,
